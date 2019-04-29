@@ -1,0 +1,45 @@
+.centrar {
+  text-align: center;
+  align-items: center;
+}
+
+p {
+  font-size: 3.5rem;
+  position: absolute;
+  top: 25%;
+}
+
+.big {
+  height: 30vh;
+}
+
+input {
+  padding: 1rem 1.6rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 7rem;
+  height: 4rem
+}
+
+#iniciar {
+  background-color: rgb(21, 200, 38);
+  color: white;
+}
+
+#pausar {
+  background-color: rgb(233, 26, 26);
+  color: white;
+}
+
+.relativo {
+  position: relative;
+}
+
+.overflow {
+  overflow-y:scroll;
+}
+
+ul {
+  list-style: none;
+}

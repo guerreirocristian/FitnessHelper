@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset= utf-8>
+		<title>Agregar elemento</title>
+
+		<!-- MI CCS -->
+		<link rel="stylesheet" type="text/css" href="css/estiloConBootstrap.css">
+
+		<!-- ICONOCS DE FONT AWESOME -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+		<!--EL VIEWPORT DEL BOOTSRAP -->
+		 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+	</head>
+	<body>
+
+		<header>
+			<input type="checkbox" id="menuCheckbox">
+				<label for="menuCheckbox"  class="mb-0"><img class="menuImg" src="css/imagenes/hexagons.png"></label>
+				<a href="paginaInicial.html" class="boton-atras"><img src="css/imagenes/CASA.png" ></a>
+
+				<nav class="menu">
+					<ul>
+						<a href="Perfil.html"><li>Perfil</li><img src="css/imagenes/perfil.png"></a>
+						<a href="rutinas.html"><li>Mis rutinas</li><img src="css/imagenes/misRutinas.png"></a>
+						<a href=""><li>Mis dietas</li><img src="css/imagenes/comida.png"></a>
+						<a href="misEjercicios.html"><li>Mis ejercicios</li><img src="css/imagenes/misEjercicios.png"></a>
+						<a href="Cronometro.html"><li>Cronómeto</li><img src="css/imagenes/cronometro.png"></a>
+						<a href=""><li>Temporizador</li><img src="css/imagenes/cronometro.png"></a>
+						<a href="" class="borderBot" onclick="desloguear()"><li>Desloguearse</li><img src="css/imagenes/desloguearse.png"></a>
+					</ul>
+				</nav>
+		</header>
+
+
+
+<div class="container-fluid ">
+	<div class="row">
+			<div class="col-1 seccion seccion"></div>
+			<div class="seccion col-11">
+				<a href="Nueva rutina.html"><img class="img-fluid" src="css/imagenes/hexagonoRutina.png"></a>
+				<p>Nueva rutina</p>
+			</div>
+			<div class="col-0 seccion"></div>
+	</div>
+
+<hr>
+	<div class="row">	
+			<div class="col-1 seccion"></div>
+			<div class="seccion col-11">
+				
+				<a href="Nueva dieta.html"><img src="css/imagenes/hexagonoDieta.png"> </a>
+				<p>Nueva dieta</p>
+			</div>
+			<div class="col-0 seccion  b-white"></div>
+	</div>
+<hr>
+	<div class="row">
+			<div class="col-1 seccion  seccion"></div>
+			<div class="seccion col-11">
+				<a href="Nuevo ejercicio.html"><img src="css/imagenes/hexagonoEjercicio.png"> </a>
+				<p>Nuevo ejercicio</p>
+			</div>
+			<div class="col-0 seccion"></div>
+	</div>
+
+	
+			
+	</div>
+</div>
+
+	<!-- desloguear -->
+		<script type="text/javascript" src="js/desloguear.js"></script>
+
+		<!-- jQuery library -->
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Popper -->
+	<script src="js/popper.min.js"></script>
+
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="js/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCCzDZKDJkfnXGSPqDXfTeS8i3wPxtiPhE",
+        authDomain: "proyecto-cris-g.firebaseapp.com",
+        databaseURL: "https://proyecto-cris-g.firebaseio.com",
+        projectId: "proyecto-cris-g",
+        storageBucket: "proyecto-cris-g.appspot.com",
+        messagingSenderId: "811753345171"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--cerrar el menu -->
+	<script type="text/javascript" src="js/cerrarMenu.js"></script>
+	</body>
+</html>

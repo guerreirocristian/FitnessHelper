@@ -1,0 +1,210 @@
+
+
+.card {
+    margin: 1rem 0 .5rem 0;
+    background-color: rgba(214, 224, 226, 0.2);
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* TODO EL PERFIL */
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    background-color: rgba(78, 148, 171,0.5);
+}
+
+.card.hovercard .cardheader {
+    background: url(imagenes/paisajePerfil.png);
+    background-size: cover;
+    height: 20vh;
+    position: relative;
+    top: 0;
+    width: auto;
+}
+
+
+/* IMAGEN DE PERFIL */
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -10vh;
+    margin-bottom: -10vh;
+}
+
+.card.hovercard .avatar div img {
+    max-width: 8rem;
+    max-height: 8rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+
+
+ /* CONTENEDOR DE NOMBRE E INFORMACIÓN */
+
+.card.hovercard .info {
+    padding-bottom: 1rem;
+}
+
+
+
+/* NOMBRE DE LA PERSONA */
+
+.card.hovercard .info .title {
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+
+/* CAJAS DE INFORMACION */
+
+.card.hovercard .info .desc {
+    overflow: hidden;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+    margin-bottom: 2rem;
+}
+
+.btn-facebook, .btn-twitter, .btn-instagram{
+    opacity: 0.4;
+    color:white;
+}
+
+.btn-facebook{
+    background-color: rgb(59, 89, 152);
+    pointer-events: none;
+}
+
+.btn-twitter {
+    background-color: rgb(8,160,233); 
+    pointer-events: none;
+}
+
+.btn-instagram {
+    background-color: rgb(193,53,132);
+    pointer-events: none;
+}
+
+.info p {
+    color: white;
+}
+
+/*BOTON EDITAR */
+
+.btn-img i{
+    position: absolute;
+    width: 2rem; 
+    height: 2rem;
+    top: 4rem;
+    right: 2vw;
+    background-color: rgb(103, 180, 206);
+    box-shadow: 0px 5px 4px rgb(102, 102, 102);
+    border-radius: 50%;
+    transition: 0s all;
+    line-height: 2rem;
+    color: rgba(230,230,230,1);
+}
+
+.btn-img i:active {
+    background-color: rgb(103, 180, 206);
+    box-shadow: 0 0px 0px rgb(102, 102, 102);
+    transform: translateY(5px);
+    border-radius: 50%;
+}
+
+.btn-editar i{
+    width: 2rem; 
+    height: 2rem;
+    background-color: rgb(103, 180, 206);
+    box-shadow: 0px 5px 4px rgb(102, 102, 102);
+    border-radius: 50%;
+    transition: 0s all;
+    line-height: 2rem;
+    color: rgba(230,230,230,1);
+}
+
+.btn-editar i:active {
+    background-color: rgb(103, 180, 206);
+    box-shadow: 0 0px 0px rgb(102, 102, 102);
+    transform: translateY(5px);
+    border-radius: 50%;
+}
+
+.fa-edit {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+/* TAMAÑO DE FUENTE DE LOS ICONOS */
+
+.fab {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}
+
+/* INVISIBLE */
+
+.ocultar {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 50%;
+}
+
+/* Centramos el modal */
+.modal {
+  text-align: center;
+  padding: 0!important;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjusts for spacing */
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*cambiamos algunas cosas del dropdown menu y agregamos color al boton*/
+.show {
+    min-width: 3rem;
+}
+
+.btn-propio {
+    background-color: rgb(103, 180, 206);
+    color: white;
+}
+
+.dropdown-menu {
+    background-color: rgba(0,0,0,0.5);
+}
+
+

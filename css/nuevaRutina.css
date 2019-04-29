@@ -1,0 +1,26 @@
+
+/* OCULTAMOS LOS MENSAJES DE ERROR, LA TABLA Y EL EJERCICIO DE NUEVA RUTINA */
+#imagenError, #nombreError, #tamañoError, #labelError, #validacionError, #contAñadirEjercicio, #contTabla {
+	display: none;
+}
+
+.imagenFondoRutina {
+	opacity: 0.5;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 50%;
+	z-index: -1;
+
+}
+
+/* El estilo de la linea de error */
+.error {
+    color: red;
+    font-size: .9rem;
+    text-align: center;
+    display: none;
+    background-color: rgb(255, 215, 215);
+    border: 1px solid red;
+    padding: .5rem;
+}

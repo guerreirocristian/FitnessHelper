@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perfil</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ICONOCS DE FONT AWESOME -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+
+    <!--ESTILO DEL PERFIL ORIGINAL https://bootsnipp.com/snippets/featured/profile-card -->
+    <link rel="stylesheet" href="css/estiloPerfil.css">
+
+    <!--MI ESTILO-->
+    <link rel="stylesheet" href="css/estiloConBootstrap.css">
+
+</head>
+<body>
+	<div class="container-fluid px-0">
+		<header>
+				<input type="checkbox" id="menuCheckbox">
+					<label for="menuCheckbox" class="mb-0"><img class="menuImg" src="css/imagenes/hexagons.png"></label>
+					<a href="paginaInicial.html" class="boton-atras"><img src="css/imagenes/CASA.png" ></a>
+
+					<nav class="menu">
+						<ul>
+							<a href="Perfil.html"><li>Perfil</li><img src="css/imagenes/perfil.png"></a>
+							<a href="rutinas.html"><li>Mis rutinas</li><img src="css/imagenes/misRutinas.png"></a>
+							<a href=""><li>Mis dietas</li><img src="css/imagenes/comida.png"></a>
+							<a href="misEjercicios.html"><li>Mis ejercicios</li><img src="css/imagenes/misEjercicios.png"></a>
+							<a href="Cronometro.html"><li>Cronómeto</li><img src="css/imagenes/cronometro.png"></a>
+							<a href=""><li>Temporizador</li><img src="css/imagenes/cronometro.png"></a>
+							<a href="" class="borderBot" onclick="desloguear()"><li>Desloguearse</li><img src="css/imagenes/desloguearse.png"></a>
+						</ul>
+
+					</nav>
+			</header>
+	</div>
+	
+	<div class="conteiner-fluid">	
+		<div class="row transparencia">
+		<div class="col-12"> <!-- CONTENEDOR -->
+
+				<!-- MENU DESPLEGABLE PARA EDITAR PERFIL -->
+        <div class="card hovercard">
+        	<div class="cardheader">
+			  	<div class="dropdown">
+			  		<button class="btn btn-propio" type="button" id="dropdownMenuButton" 	data-toggle="dropdown" aria-haspopup="true" aria-expanded="	false">
+				    	<i class="fas fa-ellipsis-v"></i>
+				  	</button>
+				 	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton"	>
+				    	<div class=" btn btn-sm btn-editar" id="editPerfil">
+				     		<i class="far fa-edit"></i>
+				    	</div>
+				    	<br>
+				    	<label class="mb-0" for="cambiarImgPerfil">
+				    		<div class=" btn btn-sm btn-editar">
+				    	   		<i class="far fa-images "></i>
+				    		</div>
+				    	</label>
+				    	<br>
+				    	<div class=" btn btn-sm btn-editar" id="editSocial">
+				    	   		<i class="far fa-laugh-beam "></i>
+				    	</div>
+				  	</div>
+				</div>
+			</div> <!-- DONDE VA LA IMAGEN -->
+
+				<div class="row transparencia">
+                	<div class="avatar col centrar">
+                		<div class="btn btn-sm btn-img" >
+                			<input type="file" class="ocultar" id="cambiarImgPerfil">
+                			<img alt="Foto de perfil" id="imgPerfil" src="css/imagenes/imgLogin.png">
+                			
+                    	</div>
+                	</div>
+
+            	</div>
+
+
+                <div class="info row transparencia">
+                    <div class="title col centrar">
+
+                        <p ><span id="nombre"></span> <span id="apellido"></span></p>
+
+                    </div>
+
+                   
+
+                    <!-- INGRESAR LAS CAJAS PENSADAS PARA EL PERFIL ACA -->
+                    <div class="desc col-12">Edad: 
+                    	<span  id="edad">Sin especificar</span>
+                    </div>
+                    <div class="desc col-12">Sexo: 
+                     	<span id="sexo">Sin especificar</span>
+                    </div>
+                    <div class="desc col-12 ">Nacionalidad: 
+                     	<span id="nacion">Sin especificar</span>
+                    </div>
+                    <div class="desc col-12">Disciplina/s: 
+                    	<span id="disci">Sin especificar</span>
+                    </div>
+                    <div class="desc col-12">Contacto:</div>
+
+                    <!-- -->
+
+                </div>
+                <div class="bottom row transparencia">
+                	<div class="col centrar">
+	                    <a class="btn btn-twitter btn-sm" id="twitter" href="">
+	                        <i class="fab fa-twitter"></i>
+	                    </a>
+                    </div>
+
+                	<div class="col centrar">
+	                    <a class="btn btn-facebook btn-sm" id="facebook" 
+	                       href="">
+	                        <i class="fab fa-facebook"></i>
+	                    </a>
+	                </div>
+
+                	<div class="col centrar">
+	                    <a class="btn btn-instagram btn-sm"  id="instagram" href="">
+	                        <i class="fab fa-instagram"></i>
+	                    </a>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<!-- MODAL DE DATOS DE PERFIL -->
+	<div class="modal fade" id="modalInfo" data-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+              	<input type="text" class="form-control mb-1" id="modalNombre" placeholder="Nombre/s">
+            	<input type="text" class="form-control mb-1" id="modalApellido" placeholder="Apellido/s">
+            	<input type="text" class="form-control mb-1" id="modalEdad" placeholder="Edad">
+            	<input type="text" class="form-control mb-1" id="modalSexo" placeholder="Sexo">
+            	<input type="text" class="form-control mb-1" id="modalNacionalidad" placeholder="Nacionalidad">
+            	<input type="text" class="form-control" id="modalDisciplina" placeholder="Disciplina/s">
+            	
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success mr-auto" id="cambiarInfoPerfil">Guardar</button>
+    		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL DE REDES SOCIALES -->
+    <div class="modal fade" id="modalSocial" data-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+
+            	
+              	<input type="text" class="form-control mb-1" id="modalTwitter" placeholder="https://twitter.com/usuario">
+            	<input type="text" class="form-control mb-1" id="modalFacebook" placeholder="https://www.facebook.com/usuario">
+            	<input type="text" class="form-control mb-1" id="modalInstagram" placeholder="https://www.instagram.com/usuario">
+            	
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-success mr-auto" id="cambiarInfoSocial">Guardar</button>
+    		<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+
+</div>
+
+	
+	<!-- jQuery library -->
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Popper -->
+	<script src="js/popper.min.js"></script>
+
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="js/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCCzDZKDJkfnXGSPqDXfTeS8i3wPxtiPhE",
+        authDomain: "proyecto-cris-g.firebaseapp.com",
+        databaseURL: "https://proyecto-cris-g.firebaseio.com",
+        projectId: "proyecto-cris-g",
+        storageBucket: "proyecto-cris-g.appspot.com",
+        messagingSenderId: "811753345171"
+        };
+        firebase.initializeApp(config);
+    </script>
+ 	
+ 	<!-- Js del perfil -->
+    <script type="text/javascript" src="js/perfil.js"></script>
+
+ 	<!-- desloguear -->
+	<script type="text/javascript" src="js/desloguear.js"></script>
+
+ 	<!--cerrar el menu -->
+	<script type="text/javascript" src="js/cerrarMenu.js"></script>
+	
+	
+</body>
+</html>

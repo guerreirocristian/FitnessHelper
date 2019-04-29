@@ -1,0 +1,257 @@
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+header {
+	width: 100%;
+	background: rgb(78, 148, 171);
+	position: relative;
+}
+
+
+h1 {
+	font-size: 100px;
+	text-align: center;
+}
+
+/*menu desplegable*/
+
+	
+	
+	header label {
+		display: inline-block;
+		width: 120px;
+		height: 120px;
+		padding: 10px;
+	
+	}
+	
+	label img {
+		width: 120px;
+		height: 120px;
+		transition: all .8s;
+	}
+	
+	 label img:active {
+		transform: rotate(80deg);
+	}
+
+
+	#menuCheckbox {
+		display: none;
+	}
+
+	.menu {
+		position: absolute;
+		background: rgb(78, 148, 171);
+		width: 70%;
+		margin-left: -70%;
+		transition: all 0.2s;
+	}
+	
+	.menu ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+	}
+
+	.menu a {
+		color: #fff;
+		text-decoration: none;
+		display: flex;
+		justify-content: space-between;
+		border-right: 1px solid #fff;
+		border-top: 2px solid #fff;
+
+		padding: 1rem;
+	}
+
+	.menu li {
+		font-size:60px;
+		margin-top: 1rem;
+		
+	}
+	
+	.menu a:active {
+		background: rgba(0,0,0,0.3);
+	}
+	
+	.menu img {
+    margin-top: 0px;
+    margin-right: 50px;
+    width: 100px;
+    height: 100px;
+
+	}
+	
+	
+	#menuCheckbox:checked ~ .menu{
+		margin: 0px;
+	}
+
+
+/* Pagina principal index */
+
+	.contenedorIndex {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.section1y3 {
+		background-color: rgb(179, 213, 229);
+	}
+	
+	.section1y3 p, .section1y3 img, .section2y4 p, .section2y4 img {
+		display: inline;
+		vertical-align: middle;
+		font-size:50px;
+
+	}
+	
+	.section1y3 p {
+		border: 1px solid black;
+		padding: 1rem 2rem 1rem 2rem;
+	}
+	
+	.section2y4 p {
+		border: 1px solid black;
+		padding: 1rem 5rem 1rem 5rem;
+		margin-left: 5rem;
+	}
+	
+	.section1y3 img {
+		width: 15rem;
+		padding: 0rem 0rem 0rem 5rem;
+	}
+	
+	.section2y4 img {
+		width: 15rem;
+		padding: 0rem 1rem 0rem 0rem;
+	}
+	
+/*botones*/
+	
+	.botonAgregar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.boton {
+		border:none;
+		padding: 2rem 2rem 2rem 2rem;
+		background-color: rgb(78, 148, 171);
+		text-decoration:none;
+		font-size: 50px;
+		color:white;
+		box-shadow: 0 10px 6px #666;
+		border-radius: 15px 15px;
+		outline: none;
+	}
+	
+	.button-url {
+		border:none;
+		padding: 2rem 2rem 2rem 2rem;
+		background-color: rgba(78, 148, 171, 0.6);
+		text-decoration:none;
+		font-size: 50px;
+		color: rgb(88, 88, 88);
+		box-shadow: 0 10px 6px #666;
+		border-radius: 15px 15px;
+		outline: none;
+		margin: 1rem;
+	}
+	
+	
+	.boton:active {
+		background-color: rgb(78, 148, 171);
+		box-shadow: 0 5px 15px #666;
+		transform: translateY(4px);
+		border-radius: 15px 15px;
+	}
+	
+	.boton-suma {
+		width: 10rem;
+		height: 5rem;
+		align-items: center;
+		line-height: 1.5rem;
+		font-size: 4rem;
+	}
+	
+	.boton-atras img {
+		width: 120px;
+		height: 120px;
+		float: right;
+	}
+	
+	.agregar-descripcion, .agregar-imagen, .boton-subir {
+		margin: 1rem 1rem 1rem 1rem;
+	}
+	
+	
+	
+
+/* Select custom  */
+
+.select-dia, .select-horario, .select-receta {
+	display: flex;
+	justify-content: center;
+	width: 90rem;
+	max-width: 30rem;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(78, 148, 171);
+	border-radius: 4px;
+	border-radius: 20px;
+}
+
+ select {
+	width: 70rem;
+	height: 5rem;
+	padding: 0px 45px 0px 15px;
+	background-color: rgb(78, 148, 171);
+	color:white;
+	font-size: 2rem;
+	border:0px;
+	border-radius: 20px;
+}
+
+.select-horario {
+	margin: 5rem;
+}
+
+.select-receta {
+	margin: 5rem;
+	margin-left: 10rem;
+}
+
+.select-receta select {
+	max-width: 22rem;
+}
+
+
+.form-registro {
+	width: 25rem;
+	padding: 2rem;
+	border:2px solid rgb(55, 55, 55);
+	
+}
+
+.form-registro input {
+	width: 20rem;
+	height: 1rem;
+}
+
+optgroup {
+	font-size: 20px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nueva rutina</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+     <link rel="stylesheet" href="css/estiloConBootstrap.css">
+     <link rel="stylesheet" href="css/nuevaRutina.css">
+
+</head>
+<body>
+	<div class="container-fluid px-0">
+		<header>
+				<input type="checkbox" id="menuCheckbox">
+					<label  class="mb-0" for="menuCheckbox"><img class="menuImg" src="css/imagenes/hexagons.png"></label>
+					<a href="paginaInicial.html" class="boton-atras"><img src="css/imagenes/CASA.png" ></a>
+
+					<nav class="menu">
+						<ul>
+							<a href="Perfil.html"><li>Perfil</li><img src="css/imagenes/perfil.png"></a>
+							<a href="rutinas.html"><li>Mis rutinas</li><img src="css/imagenes/misRutinas.png"></a>
+							<a href=""><li>Mis dietas</li><img src="css/imagenes/comida.png"></a>
+							<a href="misEjercicios.html"><li>Mis ejercicios</li><img src="css/imagenes/misEjercicios.png"></a>
+							<a href="Cronometro.html"><li>Cronómeto</li><img src="css/imagenes/cronometro.png"></a>
+							<a href=""><li>Temporizador</li><img src="css/imagenes/cronometro.png"></a>
+							<a href="" class="borderBot" onclick="desloguear()"><li>Desloguearse</li><img src="css/imagenes/desloguearse.png"></a>
+						</ul>
+
+					</nav>
+			</header>
+	</div>
+
+<h1 class="transparencia mt-2 ">Nueva Rutina</h1>
+	
+	<div class="conteiner-fluid z-index-0" id="contCrearRutina">	
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-9">
+				<input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="nombre" name="Nombre" placeholder="Nombre">
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-9">
+			<div class="form-group">
+  				<textarea class="form-control" rows="2"  id="descripcion" placeholder="Ingresa una breve descripción."></textarea>
+			</div>
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row mb-2 transparencia ">
+			<div class="col-1">
+			</div>
+			<div class="col-10">
+				<div class="custom-file">
+				  <input type="file" accept="image/*" name="elegirImagen" class="custom-file-input" id="subirImagen">
+				  <label class="custom-file-label" for="subirImagen" id="nombreArchivo">Agregar imagen</label>
+				</div>
+			</div>
+			<div class="col-1"></div>
+		</div>
+		
+		<div class="row transparencia">
+			<div class="col-4"></div>
+			<div class="col-4">
+				<input type="button" class="boton boton-subir" id="crearRutina" value="Crear rutina"></div>
+			<div class="col-4"></div>
+		</div>
+
+		<div class="row transparencia mt-4" id="contError">
+			<div class="col-1"></div>
+			<div class="col-9 ml-2">
+				<p id="imagenError" class="error">Debes añadir una imagen</p>
+				<p id="nombreError" class="error">Debes añadir un nombre</p>
+				<p id="labelError" class="error">La imagen debe ser jpeg o png.</p>
+				<p id="tamañoError" class="error">La imagen es demasiado grande</p>
+			</div>
+			<div class="col-1"></div>
+		</div>
+	</div>
+
+	<div class="conteiner-fluid">	
+			<div  id="accordion">
+		    	<div class="row">
+		   			<div class="col-12 centrar p-0" id="contTabla">
+		     			<div class="panel" >
+		        			<button type="button" class="btn btn-info" id="tablaRutina"data-toggle="collapse" data-target="#demo"></button>
+		      			</div>
+		   			</div>
+					<div id="demo" class="collapse table-responsive seccion"
+			       		data-parent="#accordion">
+			          	<table class="table table-bordered" >
+			            <thead>
+			              <th>Ejercicios</th>
+			              <th>Sets</th>
+			              <th>Reps/time</th>
+			              <th>Resttime(sec)</th>
+			            </thead> 
+			            <tbody id="tBody">
+			              	<tr>
+			                	<!-- EJEMPLO PARA NO PERFERSE
+			                		<td></td>
+			                		<td></td>
+			                		<td></td> -->
+			              	</tr>
+			              
+			            </tbody>
+			         	</table>
+			        </div>
+				</div>
+			</div>
+		</div>
+
+	<div class="conteiner-fluid" id="contAñadirEjercicio">	
+		<hr>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-9 mt-2 mb-2">
+			<select class="custom-select" id="selectEjercicio">
+				<option selected>Ejercicio</option>
+				
+			</select>
+			</div>
+			<div class="col-2 centrar"></div>
+		</div>
+
+		<div class="row transparencia mt-2">
+			<div class="col-1"></div>
+			<div class="col-9">
+				<p id="validacionError" class="error">Solo se permiten carácteres numéricos y un '-' por campo</p>
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-5 mt-2 mb-1"><p>Series:</p></div>
+			<div class="col-4 mt-2 mb-2">
+			<input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="serie">
+			</div>
+			<div class="col-2 centrar mt-3"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-5 mt-3 mb-1"><p>Repeticiones:</p></div>
+			<div class="col-4 mt-2 mb-2">
+			<input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="rep">
+			</div>
+			<div class="col-2 centrar mt-3"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-5 mt-3 mb-1"><p>Descanso(seg):</p></div>
+			<div class="col-4 mt-2 mb-2">
+			<input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="desc">
+			</div>
+			<div class="col-2 centrar mt-3"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<input type="button" class="boton boton-subir" id="añadirEjercicio" value="Añadir ejercicio a rutina"></div>
+			<div class="col-2"></div>
+		</div>
+
+	</div>
+
+
+	<img class="imagenFondoRutina" src="css/imagenes/hexagonoRutina.png">
+
+
+	<!-- desloguear -->
+		<script type="text/javascript" src="js/desloguear.js"></script>
+
+	<!-- jQuery library -->
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Popper -->
+	<script src="js/popper.min.js"></script>
+
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="js/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCCzDZKDJkfnXGSPqDXfTeS8i3wPxtiPhE",
+        authDomain: "proyecto-cris-g.firebaseapp.com",
+        databaseURL: "https://proyecto-cris-g.firebaseio.com",
+        projectId: "proyecto-cris-g",
+        storageBucket: "proyecto-cris-g.appspot.com",
+        messagingSenderId: "811753345171"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--cerrar el menu -->
+	<script type="text/javascript" src="js/cerrarMenu.js"></script>
+
+ 	<script type="text/javascript" src="js/nuevaRutina.js"></script>
+</body>
+</html>

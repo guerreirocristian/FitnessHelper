@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cronómetro</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- ICONOCS DE FONT AWESOME -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+
+    <!--ESTILO DEL CRONOMETRO -->
+    <link rel="stylesheet" href="css/estiloCronometro.css">
+
+    <!--MI ESTILO-->
+    <link rel="stylesheet" href="css/estiloConBootstrap.css">
+
+</head>
+<body>
+	<div class="container-fluid px-0">
+		<header>
+				<input type="checkbox" id="menuCheckbox">
+					<label for="menuCheckbox" class="mb-0"><img class="menuImg" src="css/imagenes/hexagons.png"></label>
+					<a href="paginaInicial.html" class="boton-atras"><img src="css/imagenes/CASA.png" ></a>
+
+					<nav class="menu">
+						<ul>
+							<a href="Perfil.html"><li>Perfil</li><img src="css/imagenes/perfil.png"></a>
+							<a href="rutinas.html"><li>Mis rutinas</li><img src="css/imagenes/misRutinas.png"></a>
+							<a href=""><li>Mis dietas</li><img src="css/imagenes/comida.png"></a>
+							<a href="misEjercicios.html"><li>Mis ejercicios</li><img src="css/imagenes/misEjercicios.png"></a>
+							<a href="Cronometro.html"><li>Cronómeto</li><img src="css/imagenes/cronometro.png"></a>
+							<a href=""><li>Temporizador</li><img src="css/imagenes/cronometro.png"></a>
+							<a href="" class="borderBot" onclick="desloguear()"><li>Desloguearse</li><img src="css/imagenes/desloguearse.png"></a>
+						</ul>
+
+					</nav>
+			</header>
+	</div>
+	
+<div class="conteiner-fluid">	
+	<div class="row centrar">
+		<div class="col big">
+			<p class="row">
+				<!-- las horas por si las queres usar -->
+			<!-- <span id="horas" class="col-3">00</span> -->
+			<span id="minutos" class="col">00</span>
+			<span id="segundos" class="col">00</span>
+			<span id="centesimas" class="col">00</span>
+			</p>
+		</div>		
+	</div>
+
+	
+
+	<div class="row">
+		<div class="col centrar">
+			<input type="button" value="Iniciar" id="iniciar">
+			<input type="button" value="Pausar" id="pausar">
+		</div>
+
+		<div class="col centrar">
+			<input type="button" value="Reiniciar" id="reiniciar">
+		</div>
+	</div>
+
+<hr>
+
+	<div class="row">
+		<div class="col centrar">
+			<input type="button" value="Vueltas" id="vueltas">
+		</div>
+
+		<div class="col centrar">
+			<input type="button" value="Limpiar" id="limpiar">
+		</div>
+	</div>
+
+<br>
+
+	<div id="log" class="row big">
+
+		<div class="col-4"></div>
+		<div class="col overflow">
+			<ul class="list-group col" id="lista">
+			</ul>
+		</div>
+		<div class="col-2"></div>
+	</div>
+	
+
+</div>
+
+	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- jQuery library -->
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Popper -->
+	<script src="js/popper.min.js"></script>
+
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="js/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCCzDZKDJkfnXGSPqDXfTeS8i3wPxtiPhE",
+        authDomain: "proyecto-cris-g.firebaseapp.com",
+        databaseURL: "https://proyecto-cris-g.firebaseio.com",
+        projectId: "proyecto-cris-g",
+        storageBucket: "proyecto-cris-g.appspot.com",
+        messagingSenderId: "811753345171"
+        };
+        firebase.initializeApp(config);
+    </script>
+ 	<!--cerrar el menu -->
+	<script type="text/javascript" src="js/cerrarMenu.js"></script>
+
+	<!-- desloguear -->
+	<script type="text/javascript" src="js/desloguear.js"></script>
+
+	<!-- Cronometro -->
+	<script type="text/javascript" src="js/cronometro.js"></script>
+</body>
+</html>
+
+

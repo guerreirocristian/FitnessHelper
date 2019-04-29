@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nuevo ejercicio</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+	
+	<!--MI ESTILO -->
+
+    <link rel="stylesheet" href="css/nuevoEjercicio.css">
+    <link rel="stylesheet" href="css/estiloConBootstrap.css">
+
+</head>
+<body>
+	<div class="container-fluid px-0">
+		<header>
+				<input type="checkbox" id="menuCheckbox">
+					<label for="menuCheckbox" class="mb-0"><img class="menuImg" src="css/imagenes/hexagons.png"></label>
+					<a href="paginaInicial.html" class="boton-atras"><img src="css/imagenes/CASA.png" ></a>
+
+					<nav class="menu">
+						<ul>
+							<a href="Perfil.html"><li>Perfil</li><img src="css/imagenes/perfil.png"></a>
+							<a href="rutinas.html"><li>Mis rutinas</li><img src="css/imagenes/misRutinas.png"></a>
+							<a href=""><li>Mis dietas</li><img src="css/imagenes/comida.png"></a>
+							<a href="misEjercicios.html"><li>Mis ejercicios</li><img src="css/imagenes/misEjercicios.png"></a>
+							<a href="Cronometro.html"><li>Cronómeto</li><img src="css/imagenes/cronometro.png"></a>
+							<a href=""><li>Temporizador</li><img src="css/imagenes/cronometro.png"></a>
+							<a href="" class="borderBot" onclick="desloguear()"><li>Desloguearse</li><img src="css/imagenes/desloguearse.png"></a>
+						</ul>
+
+					</nav>
+			</header>
+	</div>
+
+<h1 class="transparencia mt-2">Nuevo Ejercicio</h1>
+	
+	<div class="conteiner-fluid">
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-9">
+				<input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="nombre" name="Nombre" placeholder="Nombre" required>
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-9">
+				<div class="form-group">
+  				<textarea class="form-control" rows="3" id="descripcion" placeholder="(opcional) Ingresa una breve descripción. "></textarea>
+			</div>
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-0"></div>
+			<div class="col-10 mt-2 mb-2 centrar">
+				<div class="input-group">
+				  <div class="input-group-prepend">
+				    <span  class="input-group-text">Ingresar URL</span>
+				  </div>
+				  <input type="text" class="form-control" id="url" placeholder="(Opcional)">
+				</div>
+			</div>
+			<div class="col-2 centrar"></div>
+		</div>
+
+	
+
+		<div class="row mb-2 transparencia">
+			<div class="col-0">
+			</div>
+			<div class="col-10 z-index-0">
+				<div class="custom-file">
+				  <input type="file" class="custom-file-input" name="elegirImagen" id="subirImagen" required>
+				  <label class="custom-file-label" id="nombreArchivo" for="subirImagen">Agregar imagen</label>
+				</div>
+			</div>
+			<div class="col-2">
+			</div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-4"></div>
+			<div class="col-4">
+				<input type="submit" class="boton" id="subir" value="Subir +">
+			</div>
+			<div class="col-4"></div>
+		</div>
+
+		<div class="row transparencia mt-4">
+			<div class="col-1"></div>
+			<div class="col-9 ml-2">
+				<p id="imagenError" class="error">Debes añadir una imagen.</p>
+				<p id="nombreError" class="error">Debes añadir un nombre.</p>
+				<p id="labelError" class="error">La imagen debe ser jpeg o png.</p>
+				<p id="tamañoError" class="error">La imagen es demasiado grande</p>
+			</div>
+			<div class="col-1"></div>
+		</div>
+
+
+		<div class="row transparencia mt-4">
+			<div class="col-1"></div>
+			<div class="col-8 ml-2">
+				
+
+<div class="modal fade" id="modal">
+    <div class="modal-dialog centrarModal">
+      <div class="modal-content">
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          ¡Tu ejercicio se guardó correctamente!
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+				
+			</div>
+			<div class="col-3"></div>
+		</div>
+
+
+	</div>
+
+<img class="imagenFondo" src="css/imagenes/hexagonoEjercicio.png">
+
+
+	<!-- desloguear -->
+		<script type="text/javascript" src="js/desloguear.js"></script>
+	
+	<!-- jQuery library -->
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Popper -->
+	<script src="js/popper.min.js"></script>
+
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="js/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCCzDZKDJkfnXGSPqDXfTeS8i3wPxtiPhE",
+        authDomain: "proyecto-cris-g.firebaseapp.com",
+        databaseURL: "https://proyecto-cris-g.firebaseio.com",
+        projectId: "proyecto-cris-g",
+        storageBucket: "proyecto-cris-g.appspot.com",
+        messagingSenderId: "811753345171"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--cerrar el menu -->
+	<script type="text/javascript" src="js/cerrarMenu.js"></script>
+
+ 	<script type="text/javascript" src="js/nuevoEjercicio.js"></script>
+</body>
+</html>

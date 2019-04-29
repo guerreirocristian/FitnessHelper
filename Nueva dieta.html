@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nueva dieta</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+
+     <link rel="stylesheet" href="css/estiloConBootstrap.css"
+
+</head>
+<body>
+	<div class="container-fluid px-0">
+		<header>
+				<input type="checkbox" id="menuCheckbox">
+					<label for="menuCheckbox" class="mb-0"><img class="menuImg" src="css/imagenes/hexagons.png"></label>
+					<a href="paginaInicial.html" class="boton-atras"><img src="css/imagenes/CASA.png" ></a>
+
+					<nav class="menu">
+						<ul>
+							<a href="Perfil.html"><li>Perfil</li><img src="css/imagenes/perfil.png"></a>
+							<a href="rutinas.html"><li>Mis rutinas</li><img src="css/imagenes/misRutinas.png"></a>
+							<a href=""><li>Mis dietas</li><img src="css/imagenes/comida.png"></a>
+							<a href="misEjercicios.html"><li>Mis ejercicios</li><img src="css/imagenes/misEjercicios.png"></a>
+							<a href="Cronometro.html"><li>Cronómeto</li><img src="css/imagenes/cronometro.png"></a>
+							<a href=""><li>Temporizador</li><img src="css/imagenes/cronometro.png"></a>
+							<a href="" class="borderBot" onclick="desloguear()"><li>Desloguearse</li><img src="css/imagenes/desloguearse.png"></a>
+						</ul>
+
+					</nav>
+			</header>
+	</div>
+
+<h1 class="transparencia mt-2">Nueva Dieta</h1>
+	
+	<div class="conteiner-fluid">	
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-9">
+				<input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="nombre" name="Nombre" placeholder="Nombre">
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-9">
+				<input type="text" class="form-control mr-sm-2 mb-2 mb-sm-0" id="descripción" name="descripcion" placeholder="Descripción">
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-0"></div>
+			<div class="col-9 mt-2 mb-2">
+				<select class="custom-select">
+					<option selected>Receta</option>
+					<option value="1">Receta 1</option>
+					<option value="2">Receta 2</option>
+					<option value="3">Receta 3</option>
+				</select>
+			</div>
+			<div class="col-3 centrar"><input type="button" class=" boton-suma" value="+"></div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-1"></div>
+			<div class="col-8 mt-2 mb-2">
+			<select class="custom-select">
+				<option selected>Horario</option>
+				<option value="1">Desayuno</option>
+				<option value="2">Almuerzo</option>
+				<option value="3">Merienda</option>
+				<option value="4">Cena</option>
+			</select>
+			</div>
+			<div class="col-3 centrar">
+				<input type="button" class=" boton-suma" value="+">
+			</div>
+		</div>
+
+		<div class="row transparencia">
+			<div class="col-2"></div>
+			<div class="col-7 mt-2 mb-2">
+			<select class="custom-select">
+					<option selected>Días</option>
+					<option value="1">Día 1</option>
+					<option value="2">Día 2</option>
+					<option value="3">Día 3</option>
+					<option value="4">Día 4</option>
+					<option value="5">Día 5</option>
+					<option value="6">Día 6</option>
+					<option value="7">Día 7</option>
+			</select>
+			</div>
+			<div class="col-3 centrar">
+				<input type="button" class=" boton-suma" value="+">
+			</div>
+		</div>
+
+		<div class="row mb-2 mt-2 transparencia">
+			<div class="col-1">
+			</div>
+			<div class="col-10">
+				<div class="custom-file">
+				  <input type="file" class="custom-file-input" id="customFile">
+				  <label class="custom-file-label" for="customFile">Agregar imagen</label>
+				</div>
+			</div>
+			<div class="col-1"></div>
+		</div>
+		<div class="row transparencia">
+			<div class="col-4"></div>
+			<div class="col-4">
+				<input type="button" class="boton boton-subir" value="Subir dieta"></div>
+			<div class="col-4"></div>
+		</div>
+	</div>
+
+	<!-- desloguear -->
+		<script type="text/javascript" src="js/desloguear.js"></script>
+
+	<!-- jQuery library -->
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Popper -->
+	<script src="js/popper.min.js"></script>
+
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="js/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCCzDZKDJkfnXGSPqDXfTeS8i3wPxtiPhE",
+        authDomain: "proyecto-cris-g.firebaseapp.com",
+        databaseURL: "https://proyecto-cris-g.firebaseio.com",
+        projectId: "proyecto-cris-g",
+        storageBucket: "proyecto-cris-g.appspot.com",
+        messagingSenderId: "811753345171"
+        };
+        firebase.initializeApp(config);
+    </script>
+ 	
+ 	<!--cerrar el menu -->
+	<script type="text/javascript" src="js/cerrarMenu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+
+body, html {
+	font-family: sans-serif;
+position: relative;
+
+}
+
+header {
+	width: 100%;
+	background: rgb(78, 148, 171);
+}
+
+
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+/* MENU DESPLEGABLE */
+
+	
+	
+	header label {
+		display: inline-block;
+	}
+	
+	.menuImg{
+		transition: all .8s;
+		width: 2.5rem;
+		height: 100%;
+	}
+	
+	.menuImg:active {
+		transform: rotate(80deg);
+	}
+
+	.boton-atras img {
+		width: 2.5rem;
+		float: right;
+	}
+
+
+
+
+	#menuCheckbox {
+		display: none;
+		background-color: rgba(78, 148, 171,1)
+	}
+/*
+	.row {
+		background-color: white;
+	}
+*/
+	.menu {
+		position: absolute;
+		display: block;
+		background: rgb(78, 148, 171);
+		width: 70%;
+		margin-left: -70%;
+		transition: all 0.2s;
+		z-index: 4;
+		height: 100vh;
+	}
+	
+	.menu ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+	}
+
+	.menu a {
+		color: #fff;
+		text-decoration: none;
+		display: flex;
+		justify-content: space-between;
+		border-right: 1px solid #fff;
+		border-top: 2px solid #fff;
+		padding: .7rem;
+	}
+
+	.borderBot {
+		border-bottom: 2px solid #fff;
+	}
+
+	.menu li {
+		font-size: 1.25rem;
+		
+	}
+	
+	.menu a:active {
+		background: rgba(0,0,0,0.3);
+		text-decoration: none;
+		color: #fff;
+	}
+	
+	.menu img {
+    margin-top: 0px;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+
+	}
+	
+
+	#menuCheckbox:checked ~ .menu{
+		margin: 0px;
+	}
+
+	
+
+
+/* PAGINA PRINCIPAL INDEX */
+
+
+
+	.seccion {
+		background-color: rgb(179, 213, 229);
+		display: flex;
+		
+	}
+
+	
+
+	.b-white {
+		background-color: white;
+	}
+	
+	.seccion p {
+		background-color: white;
+		border: 2px solid black;
+		border-radius: 10px;
+		border-color: rgb(56, 56, 56);
+		color: black;
+		width: 50%;
+		align-self: center;
+		text-align: center;
+		margin: 0;
+
+	}
+	
+	.seccion img {
+		width: auto;
+		height: 6rem;
+	}
+
+	/*	Aca damos un radio a las imagenes que querramos	*/
+
+	.border-estilo {
+		border-radius: 1rem;
+		border: 2px solid black;
+	}
+	
+	
+/* BOTONES */
+
+	/* Clickear quita cualquier efecto en los errores */
+	.btn-danger {
+		pointer-events: none;
+	}
+
+
+	.botonAgregar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: rgb(179, 213, 229);
+	}
+	
+	.boton {
+		background-color: rgb(78, 148, 171);
+		box-shadow: 0px 5px 2px rgb(102, 102, 102);
+		border-radius: 5px;
+		border:none;
+		color:white;
+		outline: none;
+		padding: .5rem;
+		text-decoration:none;
+	}
+	
+	.button-url {
+		border:none;
+		padding: 2rem 2rem 2rem 2rem;
+		background-color: rgba(78, 148, 171, 0.6);
+		text-decoration:none;
+		font-size: 50px;
+		color: rgb(88, 88, 88);
+		box-shadow: 0 10px 6px rgb(102, 102, 102);
+		border-radius: 5px;
+		outline: none;
+		margin: .5rem;
+	}
+	
+	
+	.boton:active {
+		background-color: rgb(78, 148, 171);
+		box-shadow: 0 0px 0px rgb(102, 102, 102);
+		transform: translateY(5px);
+		border-radius: 5px 5px;
+		outline: none;
+	}
+	
+	.boton-suma {
+		background-color: rgb(78, 148, 171);
+		box-shadow: 0px 2px 2px rgb(102, 102, 102);
+		border-radius: 5px;
+		border:none;
+		color:white;
+		font-size: 1rem;
+		width: 2rem;
+		height: 2rem;
+		outline: none;
+		text-decoration:none;
+
+	}
+
+	.boton-suma:active {
+		background-color: rgb(78, 148, 171);
+		box-shadow: 0 0px 0px rgb(102, 102, 102);
+		transform: translateY(2px);
+		border-radius: 5px 5px;
+	}
+
+
+
+	.boton-cronometro {
+	color: white;
+	background-color: rgba(78, 148, 171,1);
+	}
+
+	.boton-cronometro:active {
+		color: white;
+		background-color: rgba(78, 148, 171,.5)
+	}
+	
+	
+	
+/* ROW PROBLEMA MARGEN RESUELTO */
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* TRANSPARENCIA*/
+
+.transparencia {
+	background-color: rgba(0,0,0,0);
+}
+
+
+/*IMAGEN MEDIANA DE FONDO */
+.imagenFondo {
+	opacity: 0.5;
+	position: absolute;
+	width: 50%;
+	z-index: -1;
+	bottom: 10rem;
+
+}
+
+
+
+
+/* CENTRAR OBJETOS */
+
+.centrar {
+	align-items: center;
+	text-align: center;
+}
+
+/*PROBLEMA NUEVO EJERCICIO SOLUCIONADO */
+.z-index-0 {
+	z-index: 0;
+}
+
+/* OCULTAMOS LOS MENSAJES DE ERROR Y LA TABLA DE NUEVA RUTINA */
+#imagenError, #nombreError {
+	display: none;
+}

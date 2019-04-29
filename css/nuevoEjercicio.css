@@ -1,0 +1,26 @@
+/*Los botones deben ocultarse desde el css, ya que carga antes que el js
+	y se evitan parpadeos de los botones*/
+
+
+#imagenError, #nombreError, #labelError, #tamañoError {
+	display: none;
+}
+
+
+
+.centrarModal {
+  top: 50%!important;
+  transform: translateY(-50%)!important;
+  text-align: center!important;
+}
+
+/* El estilo de la linea de error */
+.error {
+    color: red;
+    font-size: .9rem;
+    text-align: center;
+    display: none;
+    background-color: rgb(255, 215, 215);
+    border: 1px solid red;
+    padding: .5rem;
+}

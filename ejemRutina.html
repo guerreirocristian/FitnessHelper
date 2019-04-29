@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset= utf-8>
+    <title>Mis ejercicios</title>
+
+    <!-- MI CCS -->
+    <link rel="stylesheet" type="text/css" href="css/estiloConBootstrap.css">
+
+    <!-- ICONOCS DE FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!--EL VIEWPORT DEL BOOTSRAP -->
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+  </head>
+  <body>
+
+    <header>
+      <input type="checkbox" id="menuCheckbox">
+        <label for="menuCheckbox"  class="mb-0"><img class="menuImg" src="css/imagenes/hexagons.png"></label>
+        <a href="paginaInicial.html" class="boton-atras"><img src="css/imagenes/CASA.png" ></a>
+
+
+        <nav class="menu">
+          <ul>
+            <a href="Perfil.html"><li>Perfil</li><img src="css/imagenes/perfil.png"></a>
+              <a href="rutinas.html"><li>Mis rutinas</li><img src="css/imagenes/misRutinas.png"></a>
+              <a href=""><li>Mis dietas</li><img src="css/imagenes/comida.png"></a>
+              <a href="misEjercicios.html"><li>Mis ejercicios</li><img src="css/imagenes/misEjercicios.png"></a>
+              <a href="Cronometro.html"><li>Cronómeto</li><img src="css/imagenes/cronometro.png"></a>
+              <a href=""><li>Temporizador</li><img src="css/imagenes/cronometro.png"></a>
+              <a href="" class="borderBot" onclick="desloguear()"><li>Desloguearse</li><img src="css/imagenes/desloguearse.png"></a>
+          </ul>
+        </nav>
+    </header>
+
+
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-4" ></div>
+    <div class="col-4 mx-auto" >
+      <div class="text-center">
+       <a href="cronometro.html" class="boton-cronometro btn"><i class="fas fa-stopwatch"></i></a>
+      </div>
+    </div>
+    <div class="col-4" ></div>
+  </div>
+
+
+
+<h2 class="centrar">Rutinas</h2>
+
+
+
+
+   <div  id="accordion">
+  <div class="row">
+   
+    <div class="col centrar p-0">
+      <div class="panel">
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Rutina 1</button>
+      </div>
+    </div>
+
+    <div class="col centrar p-0">
+      <div class="panel">
+        <button type="button" class="btn btn-info"  data-toggle="collapse" data-target="#demo2">Rutina 2</button>
+      </div>
+    </div>
+
+    <div class="col centrar p-0">
+      <div class="panel">
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3">Rutina 3</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <hr>
+
+
+       <div id="demo" class="collapse table-responsive seccion"
+       data-parent="#accordion">
+          <table class="table table-bordered" >
+            <thead>
+              <th class="col">#</th>
+              <th class="col">Exercise</th>
+              <th class="col">Sets</th>
+              <th class="col">Reps/time</th>
+              <th class="col">Resttime(sec)</th>
+            </thead> 
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Exercise 1</td>
+                <td>4</td>
+                <td>12 - 16</td>
+                <td>80 sec</td>
+              </tr>
+               <tr>
+                <th scope="row">2</th>
+                <td>Exercise 2</td>
+                <td>5</td>
+                <td>8 - 12</td>
+                <td>80 sec</td>
+              </tr>
+               <tr>
+                <th scope="row">3</th>
+                <td>Exercise 3</td>
+                <td>2</td>
+                <td>8</td>
+                <td>40 sec</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+       <div id="demo2" class="collapse table-responsive seccion" data-parent="#accordion">
+          <table class="table table-bordered" >
+            <thead>
+              <th class="col">#</th>
+              <th class="col">Exercise</th>
+              <th class="col">Sets</th>
+              <th class="col">Reps/time</th>
+              <th class="col">Resttime(sec)</th>
+            </thead> 
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Exercise 1</td>
+                <td>4</td>
+                <td>8 - 12</td>
+                <td>80 sec</td>
+              </tr>
+               <tr>
+                <th scope="row">2</th>
+                <td>Exercise 2</td>
+                <td>4</td>
+                <td>8 - 12</td>
+                <td>80 sec</td>
+              </tr>
+               <tr>
+                <th scope="row">2</th>
+                <td>Exercise 2</td>
+                <td>4</td>
+                <td>8 - 12</td>
+                <td>80 sec</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+       <div id="demo3" class="collapse table-responsive seccion" data-parent="#accordion">
+          <table class="table table-bordered" >
+            <thead>
+              <th class="col">#</th>
+              <th class="col">Exercise</th>
+              <th class="col">Sets</th>
+              <th class="col">Reps/time</th>
+              <th class="col">Resttime(sec)</th>
+            </thead> 
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Exercise 1</td>
+                <td>4</td>
+                <td>8 - 12</td>
+                <td>80 sec</td>
+              </tr>
+               <tr>
+                <th scope="row">2</th>
+                <td>Exercise 2</td>
+                <td>4</td>
+                <td>8 - 12</td>
+                <td>80 sec</td>
+              </tr>
+               <tr>
+                <th scope="row">2</th>
+                <td>Exercise 2</td>
+                <td>4</td>
+                <td>8 - 12</td>
+                <td>80 sec</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      
+
+</div>
+</div>
+  <img class="imagenFondo" src="css/imagenes/hexagonoRutina.png">
+  
+      <!-- desloguear -->
+    <script type="text/javascript" src="js/desloguear.js"></script>
+
+    <!-- jQuery library -->
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+
+  <!-- Popper -->
+  <script src="js/popper.min.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="js/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCCzDZKDJkfnXGSPqDXfTeS8i3wPxtiPhE",
+        authDomain: "proyecto-cris-g.firebaseapp.com",
+        databaseURL: "https://proyecto-cris-g.firebaseio.com",
+        projectId: "proyecto-cris-g",
+        storageBucket: "proyecto-cris-g.appspot.com",
+        messagingSenderId: "811753345171"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--cerrar el menu -->
+    <script type="text/javascript" src="js/cerrarMenu.js"></script>
+  </body>
+</html>
